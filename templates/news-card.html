@@ -1,0 +1,27 @@
+<article class="card" itemscope itemtype="http://schema.org/Article" aria-label="news headline">
+    <div class="card-img" role="img" aria-label="{{ news.title }}">
+        <img id="news_img" src="{{news.image_url}}" alt="{{ news.title }}" style="object-fit: cover;">
+    </div>
+    <div class="card-rest">
+        <h3 class="news_title" style="font-family: 'Noto Sans Tamil'" aria-label="news headline"id="news_title">
+            {{ news.title }}
+        </h3>
+        <p class="published_at" aria-label="news published date">{{ news.published_at }}</p>
+        <br>
+        <p class="card-news-description" style="font-family: 'Noto Sans Tamil';color:#4e4e4e" aria-label="news summary"id="news_desc">
+            {{ news.summary }}
+        </p>
+        <span class="source-name" >
+            read more at
+            <a id="news_source_url" href="{{ news.source_url }}" target="_blank" itemprop="author" class="source-name-link" aria-label="Go to news website">
+                  {{ news.source_name }}
+            </a>
+            <span id="sharebtn">
+                <i class="fas fa-share" style="margin-left:10px;cursor:pointer"></i>
+            </span>
+        </span>
+        <br>
+
+        <button class="created_video_btn" id="create_btn">Create Video</button>
+    </div>
+</article>
