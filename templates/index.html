@@ -10,7 +10,8 @@
     <link href='https://fonts.googleapis.com/css?family=Noto Sans Tamil' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Noto Sans Tamil Supplement' rel='stylesheet'>
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
-
+    
+    
 </head>
 
 <body>
@@ -19,8 +20,8 @@
         <div class="container">
             <nav>
                 <a href="/">Home</a>
-                <a href="/created_v">Videos</a>
-    
+                <a href="/saved_c">Saved Content</a>
+                <a href="/created_v">Created Videos</a>
             </nav>
 
             {% for news in data %}
@@ -28,7 +29,7 @@
             {% endfor %}
         </div>
     </div>
-
+    <script src="{{url_for('static', filename='main.js')}}"></script>
 </body>
 
 </html>
