@@ -3,7 +3,7 @@
         <img id="news_img" src="{{news.image_url}}" alt="{{ news.title }}" style="object-fit: cover;">
     </div>
     <div class="card-rest">
-        <h3 class="news_title" style="font-family: 'Noto Sans Tamil'" aria-label="news headline"id="news_title">
+        <h3 class="news_title" style="font-family: 'Noto Sans Tamil'" aria-label="news headline" id="newstitle">
             {{ news.title }}
         </h3>
         <p class="published_at" aria-label="news published date">{{ news.published_at }}</p>
@@ -22,6 +22,6 @@
         </span>
         <br>
 
-        <button class="created_video_btn" id="create_btn">Save to create</button>
+        <button class="created_video_btn" id="create_btn" onclick="saveContent(this)">Save to create</button>
     </div>
 </article>

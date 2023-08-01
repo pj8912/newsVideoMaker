@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saved content</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans Tamil' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans Tamil Supplement' rel='stylesheet'>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <script src="https://kit.fontawesome.com/d191a98b5d.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="container">
+
+            {% if contents|length < 1 %} <p>No contents saved</p>
+                {% else %}
+                {% for content in contents%}
+                <div class="card" style="display: block;">
+                    <div style="display:block;padding:10px;word-wrap: break-word;">
+                        <div>
+                            Title 
+                            <span><i class="fa fa-pencil" style="font-size:14px"></i></span>
+                        </div>
+                        <div class="" style="font-family: 'Noto Sans Tamil';word-wrap: break-word;">
+                            {{content[1]}}
+                        </div>
+                        <br>
+                        <div>
+                            Description 
+                            <span><i class="fa fa-pencil" style="font-size:14px"></i></span>
+
+                        </div>
+                            <p class="" style="font-family: 'Noto Sans Tamil';color:#4e4e4e;" contenteditable="true">
+                            {{content[2]}}
+                        </p>
+                       <div>
+
+                           source_url :
+                           <span><i class="fa fa-pencil" style="font-size:14px"></i></span>
+                       </div> 
+                        {{content[4]}}<br>
+
+                        <br>
+                        <br>
+                        <div style="display: flex; flex-direction: row;">
+                            <nav>
+                                <button>Update Content</button>
+                                <button>Delete</button>
+                            </nav>
+
+                            <button style="margin-left: auto;">Create Video</button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+                {% endif %}
+
+        </div>
+    </div>
+</body>
+
+</html>
