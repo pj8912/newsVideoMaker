@@ -8,9 +8,7 @@ app = Flask(__name__)
 conn = sqlite3.connect('todo.db', check_same_thread=False)
 cursor = conn.cursor()
 
-
 urls = [
-    'https://tamil.news18.com/rss/live-updates.xml',
         'https://www.news18.com/rss/world.xml',
         'http://timesofindia.indiatimes.com/rssfeeds/296589292.cms']
 feed = combine_feeds(urls,100)
@@ -40,7 +38,9 @@ def saved_content_page():
     row = cursor.fetchall()
     return render_template("saved.html", contents=row)
 
+
+
     
 
 if __name__ ==  "__main__":
-    app.run(debug=True)
+    app.run(debug=True,port=7000)

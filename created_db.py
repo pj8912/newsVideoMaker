@@ -8,6 +8,8 @@ n_title TEXT,
 n_desc TEXT,
 n_source_url TEXT,
 n_image_url TEXT,
+language TEXT,
+status BOOLEAN,
 created_at datetime default current_timestamp,
 updated_at datetime default current_timestamp     
 )""")
