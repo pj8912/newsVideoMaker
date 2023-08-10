@@ -12,7 +12,7 @@ body {
 }
 
 .dropbtn {
-    background-color:#4e4e4e;
+    background-color: #4e4e4e;
     color: white;
     padding: 10px;
     border: none;
@@ -25,7 +25,7 @@ body {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .dropdown-content a {
@@ -43,14 +43,34 @@ body {
     display: block;
 }
 
-.main-header{
-    position:fixed;
-    background: white;
-    padding:10px;
-    z-index: 1;
+.main-header {
+    position: fixed;
+    background: black;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
 }
-.divide{
-    margin-top:100px
+
+.display-options {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 1em
+}
+.doa{
+    background: whitesmoke;
+    border-radius: 5px;
+    color:black;
+    text-align: center;
+    text-decoration: none;
+    text-align: center;
+    height: fit-content;
+    padding:5px;
+}
+
+
+.divide {
+    margin-top: 100px
 }
 
 
@@ -332,15 +352,91 @@ header a {
 
 .created_video_btn {
     margin-top: 10px;
-    border: 2px solid black;
-    color: black;
+    border: none;
+    outline: none;
+    color: white;
     padding: 8px;
     margin: 0 auto;
-    border-radius: 8px;
-    font-size: 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    background: orangered;
+    cursor: pointer;
+    /* background: black; */
+}
+
+.to_video {
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 8px;
+    margin: 0 auto;
+    border-radius: 6px;
+    font-size: 20px;
+    background: orangered;
+    cursor: pointer;
+    /* background: black; */
+}
+
+
+.to_delete {
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 8px;
+    margin: 0 auto;
+    border-radius: 6px;
+    font-size: 20px;
+    background: #DC3545;
+    cursor: pointer;
+    /* background: black; */
+}
+
+.news_status_true {
+    background: #198754;
+    color: white;
+    /* padding:10px; */
+    border-radius: 10px;
+
+}
+
+.news_status_false {
+    background: #DC3545;
+    color: white;
+    padding: 5px;
+    font-weight: bolder;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.form-div {
+    margin-top: 5px;
+    padding: 10px;
+    min-width: fit-content;
+    max-width: 200px;
+}
+
+select {
+    border: none;
+    outline: none;
+    padding: 4px;
+    border-radius: 10px;
+    width: 100px;
+    cursor: pointer;
+}
+
+option {
     background: white;
-    cursor: pointer
-        /* background: black; */
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+select option:hover {
+    color: black;
 }
 
 

@@ -1,3 +1,4 @@
+// save news content to database
 async function saveContent(button) {
     let card = button.closest('.card'); // Get the parent card element
     let titleElement = card.querySelector('.news_title');
@@ -42,6 +43,37 @@ async function saveContent(button) {
         console.log(err);
     }
 }
+
+// Delete saved news content
+async function deleteNews(id){
+    const news_id = id.toString();
+    console.log(typeof(news_id))
+    try{
+        const response = await fetch('/deletenews',{
+            method:"POST",
+            headers : {"Content-Type"  :"application/json"},
+            body : JSON.stringify({
+                'newsid' : news_id
+            })
+        });
+        const data = await response.json()
+        if (data.status == 0){console.log(`Status:${data.message}`)}
+        else if (data.status == 1){
+            console.log(`Status:${data.message}`)
+            // delay a second
+            setTimeout(function(){ 
+                console.log("Ready")
+            }, 1000);
+            // reload page
+            location.reload();
+        }
+    }
+    catch(err){
+        console.log(err)
+    }
+}
+
+
 
  // JavaScript to toggle the dropdown menu for all divs with class "dropdown"
  const dropdowns = document.querySelectorAll(".dropdown");

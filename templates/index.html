@@ -14,19 +14,22 @@
 
         <div class="container">
             <nav class="main-header">
-                <a href="/">Home</a>
-                <a href="/saved_c">Saved Content</a>
-                <a href="/created_v">Created Videos</a>
-
-                <div class="dropdown">
-                    <button class="dropbtn">Select a Category</button>
-                    <div class="dropdown-content">
-                        <a href="/sports">Sports</a>
-                        <a href="https://www.google.com">Google</a>
-                        <a href="https://www.openai.com">OpenAI</a>
-                        <!-- Add more links as needed -->
+                <div class="display-options">
+                    <a class="doa" href="/">Home</a>
+                    <a class="doa" href="/saved_c">Saved Content</a>
+                    <a class="doa" href="/created_v">Created Videos</a>
+                    <a class="doa" href="/upload-rss">Add rss link</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Select a Category</button>
+                        <div class="dropdown-content">
+                            <a href="/sports">Sports</a>
+                            <a href="https://www.google.com">Google</a>
+                            <a href="https://www.openai.com">OpenAI</a>
+                            <!-- Add more links as needed -->
+                        </div>
                     </div>
                 </div>
+
             </nav>
             <div class="divide"></div>
             {% for news in data %}

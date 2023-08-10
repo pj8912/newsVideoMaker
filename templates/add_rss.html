@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add RSS Link </title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <div class="card"
+        style="margin: 0 auto;margin-top:100px;align-self: center;justify-content: center;width:fit-content;padding:40px">
+        <h2>Add rss links</h2><br>
+        <form action="/addrss" method="post">
+            <div class="form-div">
+                <input type="url" name="rss_link" placeholder="rss link">
+            </div>
+            <br>
+            <div class="form-div">
+                <label for="">Language*</label>
+                <select name="language" id="">
+                    <option value="english">english</option>
+                    <option value="tamil">tamil</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-div">
+                <label for="">Topic*</label>
+                <select name="topic" id="">
+                    <option value="sports">Sports</option>
+                    <option value="business">Business</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="top">Top Stories</option>
+                    <option value="world">World</option>
+                    <option value="tech">Technology</option>
+                    <option value="india">India</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-div">
+                <button type="submit">Add Rss Link</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
