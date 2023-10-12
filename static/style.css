@@ -44,10 +44,9 @@ body {
 }
 
 .main-header {
-    position: fixed;
+    /* position: fixed; */
     background: black;
     padding: 10px;
-    margin-top: 5px;
     border-radius: 5px;
 }
 
@@ -57,15 +56,16 @@ body {
     flex-direction: row;
     gap: 1em
 }
-.doa{
+
+.doa {
     background: whitesmoke;
     border-radius: 5px;
-    color:black;
+    color: black;
     text-align: center;
     text-decoration: none;
     text-align: center;
     height: fit-content;
-    padding:5px;
+    padding: 5px;
 }
 
 
@@ -368,12 +368,12 @@ header a {
     margin-top: 10px;
     border: none;
     outline: none;
-    color: white;
-    padding: 8px;
+    color: black;
+    padding: 15px;
     margin: 0 auto;
-    border-radius: 6px;
-    font-size: 20px;
-    background: orangered;
+    border-radius: 20px;
+    font-size: 13px;
+    background: whitesmoke;
     cursor: pointer;
     /* background: black; */
 }
@@ -383,12 +383,12 @@ header a {
     margin-top: 10px;
     border: none;
     outline: none;
-    color: white;
-    padding: 8px;
+    color: black;
+    padding: 15px;
     margin: 0 auto;
-    border-radius: 6px;
-    font-size: 20px;
-    background: #DC3545;
+    border-radius: 20px;
+    font-size: 13px;
+    background: whitesmoke;
     cursor: pointer;
     /* background: black; */
 }
@@ -399,6 +399,11 @@ header a {
     /* padding:10px; */
     border-radius: 10px;
 
+}
+
+.navs button:hover{
+    background: #555;
+    color:white
 }
 
 .news_status_false {
@@ -832,3 +837,67 @@ select option:hover {
         object-fit: cover;
     }
 }
+
+
+/* NOTIFICATION */
+.notify {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    width: 200px;
+    padding: 12px;
+    background: #364c89;
+    color: #fff;
+    border-radius: 20px;
+    opacity: 1;
+    animation: fadeInOut 3s linear;
+    z-index: 400;
+}
+
+
+.scrollbuttons {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #4e4e4e;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    /*border-radius: 30px;*/
+    font-weight: bold;
+}
+
+.scrollbuttons:hover {
+    background-color: #555;
+}
+
+/* INPUT */
+input {
+    outline: none;
+    padding: 13px;
+    justify-self: start;
+    border: 0.5px solid #eee;
+    border-radius: 10px;
+    width: inherit;
+}
+
+input:hover {
+    border: 2px solid darkgray;
+}
+
+.add_rss_box {
+    margin: 0 auto;
+    margin-top: 100px;
+    align-self: center;
+    justify-content: center;
+    width: 300px;
+    padding: 20px;
+    background: white;
+    align-items: flex-start;
+}
+

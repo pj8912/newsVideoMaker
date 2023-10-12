@@ -36,11 +36,8 @@ def save_content():
 # SAVED CONTENT PAGE
 @app.route('/saved_c')
 def saved_content_page():
-    conn = sqlite3.connect('todo.db', check_same_thread=False)
-    cursor = conn.cursor()
     cursor.execute("SELECT * FROM saved_content ORDER BY created_at DESC")
     row = cursor.fetchall()
-
     return render_template("saved.html", contents=row)
 
 

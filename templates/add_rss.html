@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add RSS Link </title>
     <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
 </head>
+
 <body>
-    <div class="card"
-        style="margin: 0 auto;margin-top:100px;align-self: center;justify-content: center;width:fit-content;padding:40px">
+    <div class="add_rss_box">
         <h2>Add rss links</h2><br>
         <form action="/addrss" method="post">
             <div class="form-div">
+                <label for="">Rss URL</label>
                 <input type="url" name="rss_link" placeholder="rss link">
             </div>
             <br>
@@ -37,9 +39,17 @@
             </div>
             <br>
             <div class="form-div">
-                <button type="submit">Add Rss Link</button>
+                <button type="button" class="addrssbtn">Add Rss Link</button>
             </div>
         </form>
     </div>
+    <style>
+        .addrssbtn {
+            cursor: pointer;
+            padding: 10px;
+            width: 150%;
+        }
+    </style>
 </body>
+
 </html>
