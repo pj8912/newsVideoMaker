@@ -1,5 +1,5 @@
 # news-auto
-news automation to convert rss-feed to video
+Convert rss-feed news to video
 
 ## Installation
 - Clone repo
@@ -7,7 +7,7 @@ news automation to convert rss-feed to video
   git clone https://github.com/pj8912/news-auto.git
    ```
 
-- Create your venv(I use [myenv](https://github.com/pj8912/myenv))
+- Create virtual environment[venv(I use [myenv](https://github.com/pj8912/myenv))]
 
 - Install requirements
   ```
@@ -18,4 +18,4 @@ news automation to convert rss-feed to video
  
  ```
  python app.py
- ``
+ ```
