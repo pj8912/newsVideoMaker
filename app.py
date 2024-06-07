@@ -78,5 +78,9 @@ def delete_news():
         return jsonify({"status" : 0,"message":"failed!"})
     
 
+@app.route('/newsform')
+def newsform():
+    return render_template('form.html')
+
 if __name__ ==  "__main__":
     app.run(debug=True,port=7000)

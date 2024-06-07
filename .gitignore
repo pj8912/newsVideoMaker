@@ -162,3 +162,4 @@ myenv/
 *.db
 *.sqlite
 *.sqlite3
+*.mp4
